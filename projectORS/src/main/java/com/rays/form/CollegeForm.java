@@ -1,13 +1,12 @@
 package com.rays.form;
 
 import javax.validation.constraints.NotEmpty;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-
 import com.rays.common.BaseDTO;
 import com.rays.common.BaseForm;
 import com.rays.dto.CollegeDTO;
-import com.rays.dto.UserDTO;
 
 public class CollegeForm extends BaseForm{
 	

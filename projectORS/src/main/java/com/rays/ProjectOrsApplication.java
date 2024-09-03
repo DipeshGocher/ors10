@@ -46,15 +46,12 @@ public class ProjectOrsApplication extends SpringBootServletInitializer {
 			 * 
 			 */
 			public void addCorsMappings(CorsRegistry registry) {
-				CorsRegistration cors = registry.addMapping("/**");//Cross-origin resource sharing (CORS)
+				CorsRegistration cors = registry.addMapping("/**");
 				cors.allowedOrigins("http://localhost:4200");
 //				cors.allowedHeaders("*");
 				cors.allowedMethods("GET", "POST", "PUT", "DELETE");
 				cors.allowCredentials(true);
 			}
-			
-			//Cross-origin resource sharing (CORS)==>> is a browser security feature that restricts cross-origin HTTP 
-			//requests that are initiated from scripts running in the browser.
 
 			/**
 			 * Add Interceptors
@@ -62,7 +59,7 @@ public class ProjectOrsApplication extends SpringBootServletInitializer {
 
 			@Override
 			public void addInterceptors(InterceptorRegistry registry) {
-				registry.addInterceptor(frontCtl).addPathPatterns("/**").excludePathPatterns("/Auth/**" ,"/User/profilePic/**");
+				registry.addInterceptor(frontCtl).addPathPatterns("/**").excludePathPatterns("/Auth/**","/User/profilePic/**");
 			}
 
 			/*

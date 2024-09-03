@@ -2,6 +2,7 @@ package com.rays.dto;
 
 import java.util.LinkedHashMap;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;

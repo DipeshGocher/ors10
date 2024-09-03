@@ -9,13 +9,11 @@ import javax.validation.constraints.Pattern;
 public class UserRegistrationForm {
 
 	@NotEmpty(message= "please enter first name")
-	@Pattern(regexp = "^[a-zA-Z]*$")
 	private String firstName;
 	/**
 	 * Last Name of User
 	 */
 	@NotEmpty(message= "please enter last name")
-	@Pattern(regexp = "^[a-zA-Z]*$")
 	private String lastName;
 
 	@Email

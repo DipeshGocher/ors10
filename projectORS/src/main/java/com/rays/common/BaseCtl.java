@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.rays.dto.MarksheetDTO;
 import com.rays.dto.UserDTO;
 
 /**
@@ -242,9 +243,8 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 				T existDto1 = (T) baseService.findByUniqueKey(dto.getUniqueKey(), dto.getUniqueValue(), userContext);
 				if (existDto1 != null && dto.getId() != existDto1.getId()) {
 					res.addMessage(dto.getLabel() + " already exist");
-					res.setSuccess(false);
 					res.addData(dto);
-
+					res.setSuccess(false);
 					return res;
 				}
 				baseService.update(dto, userContext);
@@ -257,7 +257,7 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 						System.out.println("247----------->" + existDto);
 						res.addMessage(dto.getLabel() + " already exist");
 						res.setSuccess(false);
-												return res;
+						return res;
 					}
 				}
 

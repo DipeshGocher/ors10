@@ -10,7 +10,8 @@ import com.rays.common.BaseDTO;
 
 /**
  * College DTO class
- * Dipesh Gocher 
+ */ 
+ /** Dipesh Gocher 
  */
 
 @Entity
